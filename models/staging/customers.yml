@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: customers
+    description: "Customer details including personal information and activity status."
+    columns:
+      
+      - name: customer_id
+        description: "Customer identifier."
+        tests:
+          - unique
+          - not_null
+      
+      - name: customer_name
+        description: "Customer's name."
+      
+      - name: customer_address
+        description: "Customer's address."
+      
+      - name: customer_phone
+        description: "Customer's phone number."
+      
+      - name: customer_age
+        description: "Customer's age."
