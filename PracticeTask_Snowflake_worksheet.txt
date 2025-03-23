@@ -1,0 +1,32 @@
+select * from mat_row;
+
+select * from mat_target;
+
+select * from mohanish_customer;
+
+select * from stg_customers; -- created View using DBT config( materialized='view')
+
+select * from stg_orders; -- created stg_orders Table using DBT using config(mateerialized='table')
+select * from stg_products; -- created stg_products Table using DBT using config(mateerialized='table')
+
+--Assignment 1
+
+INSERT INTO stg_orders (order_id, order_quantity, order_date, customer_id, product_id) 
+VALUES (202, 200, '2023-06-21 00:00:00.000', 200, 200);
+INSERT INTO stg_orders (order_id, order_quantity, order_date, customer_id, product_id) 
+VALUES (302, 301, '2023-06-21 00:00:00.000', 300, 300);
+select * from stg_orders; --adding above orders to stg_orders
+select * from int_orders; --showing above added entries using dbt using incremental strategies append.
+
+
+--Assignment 2
+
+insert into stg_products (MAIN_PRODUCT_ID,PRODUCT_ID,PRODUCT_NAME,PRODUCT_PRICE,PRODUCT_PURCHASE_DATE,PRODUCT_LAST_MODIFIED_DATE,PRODUCT_ACTIVE_FLAG) values (5000,500,'Mohanish',-6,'2023-06-21 00:00:00.000','2023-06-21 00:00:00.000',True);
+insert into stg_products (MAIN_PRODUCT_ID,PRODUCT_ID,PRODUCT_NAME,PRODUCT_PRICE,PRODUCT_PURCHASE_DATE,PRODUCT_LAST_MODIFIED_DATE,PRODUCT_ACTIVE_FLAG) values (5000,500,'Mohanish',-10,'2023-06-21 00:00:00.000','2023-06-21 00:00:00.000',True);
+insert into stg_products (MAIN_PRODUCT_ID,PRODUCT_ID,PRODUCT_NAME,PRODUCT_PRICE,PRODUCT_PURCHASE_DATE,PRODUCT_LAST_MODIFIED_DATE,PRODUCT_ACTIVE_FLAG) values (5030,500,'Yash',15656,'2023-06-21 00:00:00.000','2023-06-21 00:00:00.000',False);
+
+select * from stg_products; --adding above orders to stg_orders
+select * from int_products; --showing above added entries using dbt using incremental strategies append.
+
+
+
