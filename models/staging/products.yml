@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: products
+    description: "Products details of particular orders."
+    columns:
+      
+      - name: main_product_id
+        description: "Main Id of product for particlar Id"
+      
+      - name: product_id
+        description: "Product ID of particular Product"
+        tests:
+          - unique
+          - not_null
+      
+      - name: product_name
+        description: "Name of the Product"
+        
+      - name: product_price
+        description: "Price of the product"
+
+      - name: product_purchase_date
+        description: "Purchase Date of the Product"
+      
+      - name: product_last_modified_date
+        description: "Modified date of the product"
+
+      - name: product_active_flag
+        description: "Active Flag of the Product"
+      
