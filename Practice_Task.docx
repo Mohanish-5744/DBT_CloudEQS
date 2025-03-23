@@ -12,6 +12,8 @@ Maintain separate YAML files for each model to document their respective columns
 
 DBT Incremental Model Practice Assignments
 
+-------------------------------------------------------------------------
+
 Assignment 1: Incremental Model with `append` Strategy
 
 Objective:
@@ -25,6 +27,8 @@ Model Details:
 Challenge:
 - Add a test to ensure `order_id` is unique and not null.
 
+-------------------------------------------------------------------------
+
 Assignment 2: Incremental Model with `delete+insert` Strategy
 
 Objective:
@@ -37,6 +41,8 @@ Model Details:
 
 Challenge:
 - Add tests for `product_id` uniqueness and `price` to be greater than zero.
+
+-------------------------------------------------------------------------
 
 Assignment 3: Incremental Model with `merge` Strategy
 
