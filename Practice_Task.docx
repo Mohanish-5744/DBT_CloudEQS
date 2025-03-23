@@ -64,4 +64,9 @@ Create an audit model that tracks:
 - The timestamp of the last successful run.
 
 
+-------------------------------------------------------------------------
+
+
+Documentation:
+https://docs.getdbt.com/docs/build/incremental-strategy
 
